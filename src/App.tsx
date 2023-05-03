@@ -3,7 +3,7 @@ import AppHeader from './component/AppHeader';
 import React from "react";
 import MyFooter from "./component/Footer/MyFooter";
 
-const {Content, Footer} = Layout;
+
 
 const App = () => {
     return (
