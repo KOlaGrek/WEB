@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { useEffect, useState} from 'react';
 
 import type {MenuProps} from 'antd';
 import { Layout, Menu, theme} from 'antd';
 import Cars from "./Cars";
 import '../App.css'
-import {films} from "../data";
+
 import Card from "./Card/Card";
+
+
 
 const {Header, Content} = Layout;
 
@@ -17,9 +19,13 @@ const items1: MenuProps['items'] = ['1', '2', '3'].map((key) => ({
 
 
 const AppHeader: React.FC = () => {
+    const [data,setData] = useState([])
     const {
         token: {colorBgContainer},
     } = theme.useToken();
+    useEffect(()=>{
+        setData(JSON.parse(localStorage.getItem('film')))
+    },[])
 
     return (
         <Layout>
@@ -41,7 +47,7 @@ const AppHeader: React.FC = () => {
                     <h1  style={{textAlign:"center",marginTop:"20px",fontSize:"25px"}}>Лучшие фильмы всех времен</h1>
                     <div className="cards-home">
 
-                        {films.map(el=><Card key={el.name} {...el}/>)}
+                        {data.map(el=><Card key={el.name} {...el}/>)}
                     </div>
                 </Layout>
             </Content>
