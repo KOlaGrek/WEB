@@ -16,3 +16,19 @@
     gap: 40px;
     flex-wrap: wrap;
 }
+.header{
+    display: flex;
+    margin: 0 20% ;
+    gap: 30px;
+    height: 60px;
+    align-items: center;
+    justify-content: left;
+}
+.header a{
+    text-decoration: none;
+    color: black;
+}
+.header a:hover{
+    font-size: 1.1rem;
+    transition: 0.3s all;
+}
