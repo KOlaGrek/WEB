@@ -26,7 +26,7 @@ const Cars = () => {
     ];
 
     return (
-        <div style={{ padding: '30px',margin:"auto",display:"flex",height:'90vh'}}>
+        <div style={{ padding: '30px',margin:"auto",display:"flex"}}>
             <Row gutter={[16, 16]}>
                 {carData.map((car: CarProps, index: number) => (
                     <Col span={8} key={index}>

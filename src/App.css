@@ -10,3 +10,9 @@
     padding-top:60px ;
 
 }
+.cards-home{
+    display: flex;
+    margin: 50px 15%;
+    gap: 40px;
+    flex-wrap: wrap;
+}
