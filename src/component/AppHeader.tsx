@@ -1,20 +1,11 @@
 import React, { useEffect, useState} from 'react';
 
-import type {MenuProps} from 'antd';
 import { Layout, Menu, theme} from 'antd';
 import Cars from "./Cars";
 import '../App.css'
 
 import Card from "./Card/Card";
-import {NavLink} from "react-router-dom";
-
-
-
 const {Content} = Layout;
-
-
-
-
 
 const AppHeader: React.FC = () => {
     const [data,setData] = useState([])
